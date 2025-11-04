@@ -1,0 +1,22 @@
+# Ignore build outputs
+.next/
+dist/
+build/
+out/
+
+# Ignore dependencies
+node_modules/
+pnpm-lock.yaml
+
+# Ignore generated files
+*.min.js
+*.min.css
+
+# Ignore config files that shouldn't be formatted
+package-lock.json
+yarn.lock
+
+# Ignore other files
+.git/
+.turbo/
+coverage/
