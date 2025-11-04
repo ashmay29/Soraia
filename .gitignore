@@ -1,0 +1,36 @@
+# Node.js & pnpm (frontend & packages)
+node_modules/
+.pnpm-store
+dist/
+build/
+.next/
+out/
+.env*
+*.log
+.DS_Store
+
+# Python/FastAPI (backend)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+venv/
+env/
+*.sqlite3
+*.db
+
+# VSCode/editor config
+.vscode/
+.idea/
+*.swp
+
+# Turborepo cache
+.turbo/
+
+# macOS system files
+.DS_Store
+
+# Other
+*.local
+coverage/
