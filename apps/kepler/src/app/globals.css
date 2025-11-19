@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../styles/flower.css";
 
 /* Define base CSS variables at root */
 :root {
@@ -48,64 +49,4 @@
   h6 {
     font-family: var(--font-display);
   }
-}
-
-/* Custom keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Custom utility classes */
-@utility animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-@utility animate-fade-in {
-  animation: fadeIn 1s ease-out forwards;
-}
-
-@utility animate-slide-in-left {
-  animation: slideInLeft 0.8s ease-out forwards;
-}
-
-@utility animate-slide-in-right {
-  animation: slideInRight 0.8s ease-out forwards;
 }

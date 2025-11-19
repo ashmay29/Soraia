@@ -1,6 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="bg-primary text-background px-6 py-16 lg:px-12">
+    <footer
+      className="bg-primary text-background relative px-6 py-16 lg:px-12"
+      style={{
+        backgroundImage: "url('/background.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-3">
           {/* Brand */}

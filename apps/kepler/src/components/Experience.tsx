@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import StripePattern from "./Hero/animations/StripePattern";
 
 export default function Experience() {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,13 +19,14 @@ export default function Experience() {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSection) {
+        observer.unobserve(currentSection);
       }
     };
   }, []);
@@ -129,7 +131,14 @@ export default function Experience() {
           }`}
           style={{ transitionDelay: "800ms" }}
         >
-          <div className="bg-primary text-background border-gold border-2 p-12">
+          <div
+            className="bg-primary text-background border-gold relative border-2 p-12"
+            style={{
+              backgroundImage: "url('/background.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
             <h3 className="font-display mb-8 text-3xl">Opening Hours</h3>
             <div className="space-y-4">
               <div className="border-gold flex justify-between border-b pb-3">
@@ -163,15 +172,18 @@ export default function Experience() {
             </div>
           </div>
 
-          <div className="bg-secondary text-foreground border-primary border-2 p-12">
-            <h3 className="font-display mb-8 text-3xl">The Dress Code</h3>
-            <p className="mb-6 leading-relaxed">
-              Members and their guests should be elegantly dressed, and gentlemen are required to
-              wear a formal blazer and smart collared shirt at all times.
-            </p>
-            <p className="text-gray text-sm leading-relaxed">
-              Whilst suits are actively encouraged, smart dark denim is permitted in the evening.
-            </p>
+          <div className="bg-secondary text-foreground border-primary relative overflow-hidden border-2 p-12">
+            <StripePattern />
+            <div className="relative z-10">
+              <h3 className="font-display mb-8 text-3xl">The Dress Code</h3>
+              <p className="mb-6 leading-relaxed">
+                Members and their guests should be elegantly dressed, and gentlemen are required to
+                wear a formal blazer and smart collared shirt at all times.
+              </p>
+              <p className="text-gray text-sm leading-relaxed">
+                Whilst suits are actively encouraged, smart dark denim is permitted in the evening.
+              </p>
+            </div>
           </div>
         </div>
       </div>
