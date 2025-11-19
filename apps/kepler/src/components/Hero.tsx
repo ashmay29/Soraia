@@ -2,9 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Flower2 from "@/components/Hero/animations/Flower2";
 import FlowerBorder from "@/components/Hero/animations/FlowerBorder";
-import StripePattern from "@/components/Hero/animations/StripePattern";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,10 +34,7 @@ export default function Hero() {
         className="absolute inset-0 h-full w-full object-cover object-[center_70%]"
       />
       {/* Decorative gold linework overlays */}
-      <FlowerBorder
-        colorClass="text-gold"
-        opacityClass={dimFlowers ? "opacity-10" : "opacity-90"}
-      />
+      <FlowerBorder colorClass="text-gold" opacityClass={dimFlowers ? "opacity-5" : "opacity-90"} />
       <div className="relative z-10 mx-auto w-full max-w-7xl">
         <div className="text-center">
           {/* Main Title */}
