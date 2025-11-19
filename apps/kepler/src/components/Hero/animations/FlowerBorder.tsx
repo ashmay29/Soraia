@@ -1,7 +1,15 @@
 import React from "react";
 import { flowerPaths } from "./FlowerPaths";
 
-export default function FlowerBorder() {
+type Props = {
+  colorClass?: string; // e.g. "text-gold" or "text-primary"
+  opacityClass?: string; // e.g. "opacity-40"
+};
+
+export default function FlowerBorder({
+  colorClass = "text-primary",
+  opacityClass = "opacity-40",
+}: Props) {
   // Calculate staggered animation delays for each path
   // Each path starts 80ms after the previous one for smooth sequential drawing
   const getAnimationDelay = (index: number) => index * 80;
@@ -18,7 +26,7 @@ export default function FlowerBorder() {
         <path
           key={index}
           d={pathData}
-          className="animate-stroke text-primary"
+          className="animate-stroke"
           style={{
             animationDelay: `${getAnimationDelay(index)}ms`,
           }}
@@ -28,12 +36,14 @@ export default function FlowerBorder() {
   );
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-40">
+    <div
+      className={`pointer-events-none fixed inset-0 z-40 transition-opacity duration-500 ${opacityClass}`}
+    >
       {/* Bottom Right - Rotated towards center */}
       <div className="absolute -right-64 -bottom-64 h-[900px] w-[900px] origin-center rotate-[135deg]">
         <svg
           viewBox="0 0 2500 3000"
-          className="stroke-primary h-full w-full"
+          className={`h-full w-full ${colorClass}`}
           preserveAspectRatio="xMidYMid meet"
         >
           {botanicalFlower}
@@ -44,7 +54,7 @@ export default function FlowerBorder() {
       <div className="absolute -top-64 -left-64 h-[900px] w-[900px] origin-center rotate-[315deg]">
         <svg
           viewBox="0 0 2500 3000"
-          className="stroke-primary h-full w-full"
+          className={`h-full w-full ${colorClass}`}
           preserveAspectRatio="xMidYMid meet"
         >
           {botanicalFlower}
