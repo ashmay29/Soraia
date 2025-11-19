@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FlowerBorder from "@/components/Hero/animations/FlowerBorder";
 
 export const metadata: Metadata = {
   title: "Soraia - Modern Indian-European Restaurant",
@@ -22,7 +23,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="relative antialiased">
+        <FlowerBorder />
+
+        {children}
+      </body>
     </html>
   );
 }

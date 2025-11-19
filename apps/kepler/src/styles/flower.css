@@ -1,0 +1,180 @@
+/* Elegant Flower Entrance Animations */
+@keyframes floatInTopLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-20px, -20px) scale(0.9) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes floatInTopRight {
+  0% {
+    opacity: 0;
+    transform: translate(20px, -20px) scale(0.9) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes floatInBottomLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-20px, 20px) scale(0.9) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes floatInBottomRight {
+  0% {
+    opacity: 0;
+    transform: translate(20px, 20px) scale(0.9) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+/* Utility classes with staggered delays */
+@utility animate-flower-tl {
+  animation: floatInTopLeft 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0ms;
+}
+
+@utility animate-flower-tr {
+  animation: floatInTopRight 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 400ms;
+}
+
+@utility animate-flower-bl {
+  animation: floatInBottomLeft 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 800ms;
+}
+
+@utility animate-flower-br {
+  animation: floatInBottomRight 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 1200ms;
+}
+
+/* Existing page transition animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Custom utility classes */
+@utility animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@utility animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@utility animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+@utility animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* SVG Line Drawing Animation */
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeFill {
+  from {
+    fill-opacity: 0;
+    opacity: 0;
+  }
+  to {
+    fill-opacity: 1;
+    opacity: 1;
+  }
+}
+
+/* Base utility for drawn paths */
+.path-draw {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawLine 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Base utility for filled parts (buds) */
+.fill-fade {
+  opacity: 0;
+  animation: fadeFill 0.5s ease-out forwards;
+}
+
+/* Detailed SVG Stroke Drawing Animation */
+@keyframes drawStroke {
+  from {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@utility animate-stroke {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke: currentColor;
+  fill: none;
+  opacity: 0;
+  animation: drawStroke 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}

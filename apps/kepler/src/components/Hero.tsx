@@ -1,12 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -26,9 +30,16 @@ export default function Hero() {
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            <h1 className="text-gold font-display -mt-8 mb-8 text-6xl tracking-tight italic md:-mt-16 md:text-7xl lg:text-8xl">
-              Soraia
-            </h1>
+            <div className="mb-0.1 relative mx-auto h-32 w-96">
+              <Image
+                src="/name.png"
+                alt="Soraia"
+                fill
+                className="object-contain"
+                priority
+                sizes="(max-width: 768px) 100vw, 384px"
+              />
+            </div>
           </div>
         </div>
       </div>
