@@ -3,16 +3,18 @@
 /* Define base CSS variables at root */
 :root {
   /* Color Palette */
-  --background: #faf6ea;
-  --foreground: #3a412e;
-  --primary: #476346;
-  --secondary: #8b9e86;
-  --accent: #3a412e;
-  --light: #f9f9f9;
-  --gray: #c4c4c4;
+  --background: #f5f3e5;
+  --foreground: #00382e;
+  --primary: #00382e;
+  --secondary: #286b5f;
+  --accent: #dcc592;
+  --gold: #c9a05c;
+  --light: #f5f3e5;
+  --gray: #8b9e86;
 
   /* Typography */
-  --font-display: "Georgia", "Times New Roman", serif;
+  --font-display: "Playfair Display", "Georgia", "Times New Roman", serif;
+  --font-body: "Cormorant Garamond", "Georgia", serif;
 }
 
 /* Map root variables to Tailwind theme */
@@ -22,9 +24,11 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
+  --color-gold: var(--gold);
   --color-light: var(--light);
   --color-gray: var(--gray);
   --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
 /* Custom styles that should override defaults */
@@ -32,8 +36,17 @@
   body {
     background: var(--color-background);
     color: var(--color-foreground);
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
   }
 }
 

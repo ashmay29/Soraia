@@ -30,7 +30,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <section id="contact" ref={sectionRef} className="bg-light px-6 py-32 lg:px-12">
+    <section id="contact" ref={sectionRef} className="bg-background px-6 py-32 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           {/* Left Side - Contact Info */}
@@ -39,15 +39,15 @@ export default function Contact() {
               isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
             }`}
           >
-            <h2 className="text-primary mb-8 font-serif text-4xl md:text-5xl lg:text-6xl">
+            <h2 className="text-primary font-display mb-8 text-4xl md:text-5xl lg:text-6xl">
               Visit Us
             </h2>
 
-            <div className="bg-primary mb-12 h-px w-16"></div>
+            <div className="bg-gold mb-12 h-px w-16"></div>
 
             <div className="space-y-8">
               <div>
-                <h3 className="text-secondary mb-3 text-sm tracking-widest uppercase">Location</h3>
+                <h3 className="text-primary mb-3 text-xs tracking-[0.2em] uppercase">Location</h3>
                 <p className="text-foreground text-lg leading-relaxed">
                   Mumbai, India
                   <br />A destination for refined dining
@@ -55,7 +55,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <h3 className="text-secondary mb-3 text-sm tracking-widest uppercase">
+                <h3 className="text-primary mb-3 text-xs tracking-[0.2em] uppercase">
                   Reservations
                 </h3>
                 <p className="text-foreground text-lg leading-relaxed">
@@ -66,11 +66,11 @@ export default function Contact() {
               </div>
 
               <div>
-                <h3 className="text-secondary mb-3 text-sm tracking-widest uppercase">Connect</h3>
+                <h3 className="text-primary mb-3 text-xs tracking-[0.2em] uppercase">Connect</h3>
                 <div className="flex gap-6">
                   <a
                     href="#"
-                    className="text-foreground hover:text-primary transition-colors duration-300"
+                    className="text-foreground hover:text-gold transition-colors duration-300"
                     aria-label="Instagram"
                   >
                     <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -79,7 +79,7 @@ export default function Contact() {
                   </a>
                   <a
                     href="#"
-                    className="text-foreground hover:text-primary transition-colors duration-300"
+                    className="text-foreground hover:text-gold transition-colors duration-300"
                     aria-label="Facebook"
                   >
                     <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -98,15 +98,15 @@ export default function Contact() {
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            <div className="bg-primary p-12">
-              <h3 className="text-background mb-8 font-serif text-3xl">Make a Reservation</h3>
+            <div className="bg-primary border-gold border-2 p-12">
+              <h3 className="text-background font-display mb-8 text-3xl">Make a Reservation</h3>
 
               <form className="space-y-6">
                 <div>
                   <input
                     type="text"
                     placeholder="Name"
-                    className="border-secondary text-background placeholder-secondary focus:border-background w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
+                    className="border-gold text-background placeholder-gold/50 focus:border-gold w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
                   />
                 </div>
 
@@ -114,7 +114,7 @@ export default function Contact() {
                   <input
                     type="email"
                     placeholder="Email"
-                    className="border-secondary text-background placeholder-secondary focus:border-background w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
+                    className="border-gold text-background placeholder-gold/50 focus:border-gold w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
                   />
                 </div>
 
@@ -122,7 +122,7 @@ export default function Contact() {
                   <input
                     type="tel"
                     placeholder="Phone"
-                    className="border-secondary text-background placeholder-secondary focus:border-background w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
+                    className="border-gold text-background placeholder-gold/50 focus:border-gold w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
                   />
                 </div>
 
@@ -131,14 +131,14 @@ export default function Contact() {
                     <input
                       type="date"
                       placeholder="Date"
-                      className="border-secondary text-background placeholder-secondary focus:border-background w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
+                      className="border-gold text-background placeholder-gold/50 focus:border-gold w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
                     />
                   </div>
                   <div>
                     <input
                       type="time"
                       placeholder="Time"
-                      className="border-secondary text-background placeholder-secondary focus:border-background w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
+                      className="border-gold text-background placeholder-gold/50 focus:border-gold w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
                     />
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export default function Contact() {
                     type="number"
                     placeholder="Number of Guests"
                     min="1"
-                    className="border-secondary text-background placeholder-secondary focus:border-background w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
+                    className="border-gold text-background placeholder-gold/50 focus:border-gold w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
                   />
                 </div>
 
@@ -156,13 +156,13 @@ export default function Contact() {
                   <textarea
                     placeholder="Special Requests"
                     rows={4}
-                    className="border-secondary text-background placeholder-secondary focus:border-background w-full resize-none border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
+                    className="border-gold text-background placeholder-gold/50 focus:border-gold w-full resize-none border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="bg-background text-primary hover:bg-light w-full py-4 text-sm tracking-widest uppercase transition-colors duration-300"
+                  className="bg-gold text-primary hover:bg-accent hover:text-background border-gold w-full border-2 py-4 text-xs tracking-[0.2em] uppercase transition-colors duration-300"
                 >
                   Request Reservation
                 </button>

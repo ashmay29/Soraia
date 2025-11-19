@@ -20,7 +20,7 @@ export default function Hero() {
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            <h1 className="text-primary mb-8 font-serif text-6xl tracking-tight md:text-7xl lg:text-8xl">
+            <h1 className="text-gold font-display mb-8 text-6xl tracking-tight italic md:text-7xl lg:text-8xl">
               Soraia
             </h1>
           </div>
@@ -32,7 +32,7 @@ export default function Hero() {
             }`}
             style={{ transitionDelay: "400ms" }}
           >
-            <div className="bg-primary h-px w-24"></div>
+            <div className="bg-gold h-px w-24"></div>
           </div>
 
           {/* Subtitle */}
@@ -42,7 +42,7 @@ export default function Hero() {
             }`}
             style={{ transitionDelay: "600ms" }}
           >
-            <p className="text-foreground mx-auto max-w-4xl text-lg leading-relaxed font-light md:text-xl lg:text-2xl">
+            <p className="text-foreground mx-auto max-w-4xl text-base leading-relaxed font-light md:text-lg lg:text-xl">
               India&apos;s first modern Indian-European restaurant with an Omakase Bar,
               <br className="hidden md:block" />
               blending Indian warmth and European sophistication
@@ -58,7 +58,7 @@ export default function Hero() {
           >
             <a
               href="#experience"
-              className="bg-primary text-background hover:bg-accent border-primary hover:border-accent inline-block border px-12 py-4 text-sm tracking-widest uppercase transition-all duration-300"
+              className="bg-primary text-background hover:bg-secondary border-primary hover:border-secondary inline-block border-2 px-12 py-4 text-xs tracking-[0.2em] uppercase transition-all duration-300"
             >
               Discover More
             </a>
@@ -74,8 +74,8 @@ export default function Hero() {
         style={{ transitionDelay: "1000ms" }}
       >
         <div className="flex animate-bounce flex-col items-center gap-2">
-          <div className="bg-secondary h-12 w-px"></div>
-          <div className="bg-secondary h-1 w-1 rounded-full"></div>
+          <div className="bg-primary h-12 w-px"></div>
+          <div className="bg-primary h-1 w-1 rounded-full"></div>
         </div>
       </div>
     </section>

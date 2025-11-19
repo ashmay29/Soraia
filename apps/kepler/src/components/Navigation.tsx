@@ -23,25 +23,25 @@ export default function Navigation() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="flex h-20 items-center justify-between">
           <div className="animate-fade-in">
-            <h1 className="text-foreground font-serif text-2xl tracking-wide">Soraia</h1>
+            <h1 className="text-gold font-display text-2xl tracking-wide italic">Soraia</h1>
           </div>
 
           <div className="animate-fade-in hidden items-center gap-12 md:flex">
             <a
               href="#about"
-              className="text-foreground hover:text-primary text-sm tracking-wider uppercase transition-colors duration-300"
+              className="text-foreground hover:text-gold text-xs tracking-[0.2em] uppercase transition-colors duration-300"
             >
               About
             </a>
             <a
               href="#experience"
-              className="text-foreground hover:text-primary text-sm tracking-wider uppercase transition-colors duration-300"
+              className="text-foreground hover:text-gold text-xs tracking-[0.2em] uppercase transition-colors duration-300"
             >
               Experience
             </a>
             <a
               href="#contact"
-              className="text-foreground hover:text-primary text-sm tracking-wider uppercase transition-colors duration-300"
+              className="text-foreground hover:text-gold text-xs tracking-[0.2em] uppercase transition-colors duration-300"
             >
               Contact
             </a>

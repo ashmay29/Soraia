@@ -30,7 +30,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="bg-light px-6 py-32 lg:px-12">
+    <section id="about" ref={sectionRef} className="bg-background px-6 py-32 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           {/* Left Content */}
@@ -39,13 +39,13 @@ export default function About() {
               isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
             }`}
           >
-            <h2 className="text-primary mb-8 font-serif text-4xl md:text-5xl lg:text-6xl">
+            <h2 className="text-primary font-display mb-8 text-4xl md:text-5xl lg:text-6xl">
               A Harmonious
               <br />
               Experience
             </h2>
 
-            <div className="bg-primary mb-8 h-px w-16"></div>
+            <div className="bg-gold mb-8 h-px w-16"></div>
 
             <div className="text-foreground space-y-6 text-base leading-relaxed md:text-lg">
               <p>
@@ -68,12 +68,12 @@ export default function About() {
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            <div className="bg-secondary relative flex aspect-4/5 items-center justify-center p-12">
-              <div className="border-background flex h-full w-full items-center justify-center border p-8">
+            <div className="bg-primary relative flex aspect-4/5 items-center justify-center p-12">
+              <div className="border-gold flex h-full w-full items-center justify-center border-2 p-8">
                 <div className="text-center">
-                  <div className="border-background mx-auto mb-6 flex h-24 w-24 items-center justify-center border-2">
+                  <div className="border-gold mx-auto mb-6 flex h-24 w-24 items-center justify-center border-2">
                     <svg
-                      className="text-background h-12 w-12"
+                      className="text-gold h-12 w-12"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -86,7 +86,7 @@ export default function About() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-background mb-4 font-serif text-2xl">Culinary Excellence</h3>
+                  <h3 className="text-gold font-display mb-4 text-2xl">Culinary Excellence</h3>
                   <p className="text-background text-sm leading-relaxed">
                     Where tradition meets innovation
                   </p>

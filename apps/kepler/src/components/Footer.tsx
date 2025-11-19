@@ -1,11 +1,11 @@
 export default function Footer() {
   return (
-    <footer className="bg-accent text-background px-6 py-16 lg:px-12">
+    <footer className="bg-primary text-background px-6 py-16 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <h3 className="mb-4 font-serif text-3xl">Soraia</h3>
+            <h3 className="font-display text-gold mb-4 text-3xl italic">Soraia</h3>
             <p className="text-gray text-sm leading-relaxed">
               India&apos;s first modern Indian-European restaurant with an Omakase Bar
             </p>
@@ -13,12 +13,12 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-secondary mb-4 text-sm tracking-widest uppercase">Quick Links</h4>
+            <h4 className="text-gold mb-4 text-xs tracking-[0.2em] uppercase">Quick Links</h4>
             <ul className="space-y-3">
               <li>
                 <a
                   href="#about"
-                  className="text-background hover:text-secondary transition-colors duration-300"
+                  className="text-background hover:text-gold transition-colors duration-300"
                 >
                   About
                 </a>
@@ -26,7 +26,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#experience"
-                  className="text-background hover:text-secondary transition-colors duration-300"
+                  className="text-background hover:text-gold transition-colors duration-300"
                 >
                   Experience
                 </a>
@@ -34,7 +34,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#contact"
-                  className="text-background hover:text-secondary transition-colors duration-300"
+                  className="text-background hover:text-gold transition-colors duration-300"
                 >
                   Contact
                 </a>
@@ -44,7 +44,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-secondary mb-4 text-sm tracking-widest uppercase">Contact</h4>
+            <h4 className="text-gold mb-4 text-xs tracking-[0.2em] uppercase">Contact</h4>
             <p className="text-background text-sm leading-relaxed">
               Mumbai, India
               <br />
@@ -54,8 +54,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-primary flex flex-col items-center justify-between gap-4 border-t pt-8 md:flex-row">
-          <p className="text-gray text-sm">
+        <div className="border-gold flex flex-col items-center justify-between gap-4 border-t pt-8 md:flex-row">
+          <p className="text-background/70 text-sm">
             © {new Date().getFullYear()} Soraia. All rights reserved.
           </p>
           <div className="flex gap-6">

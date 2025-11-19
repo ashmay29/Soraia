@@ -86,11 +86,11 @@ export default function Experience() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-primary mb-6 font-serif text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="text-primary font-display mb-6 text-4xl md:text-5xl lg:text-6xl">
             The Experience
           </h2>
           <div className="mb-8 flex justify-center">
-            <div className="bg-primary h-px w-16"></div>
+            <div className="bg-gold h-px w-16"></div>
           </div>
           <p className="text-foreground mx-auto max-w-3xl text-lg leading-relaxed">
             Discover the unique elements that make Soraia an unforgettable destination
@@ -107,11 +107,11 @@ export default function Experience() {
               }`}
               style={{ transitionDelay: `${(index + 1) * 200}ms` }}
             >
-              <div className="bg-light hover:bg-secondary hover:text-background group h-full p-10 transition-all duration-500">
-                <div className="text-primary group-hover:text-background mb-6 transition-colors duration-500">
+              <div className="bg-background hover:bg-primary hover:text-background group border-secondary hover:border-gold h-full border-2 p-10 transition-all duration-500">
+                <div className="text-gold group-hover:text-gold mb-6 transition-colors duration-500">
                   {exp.icon}
                 </div>
-                <h3 className="text-foreground group-hover:text-background mb-4 font-serif text-2xl transition-colors duration-500">
+                <h3 className="text-foreground group-hover:text-background font-display mb-4 text-2xl transition-colors duration-500">
                   {exp.title}
                 </h3>
                 <p className="text-foreground group-hover:text-background leading-relaxed transition-colors duration-500">
@@ -129,10 +129,10 @@ export default function Experience() {
           }`}
           style={{ transitionDelay: "800ms" }}
         >
-          <div className="bg-primary text-background p-12">
-            <h3 className="mb-8 font-serif text-3xl">Opening Hours</h3>
+          <div className="bg-primary text-background border-gold border-2 p-12">
+            <h3 className="font-display mb-8 text-3xl">Opening Hours</h3>
             <div className="space-y-4">
-              <div className="border-secondary flex justify-between border-b pb-3">
+              <div className="border-gold flex justify-between border-b pb-3">
                 <span className="font-light">Monday - Friday</span>
                 <span>11:00am - 1am</span>
               </div>
@@ -146,7 +146,7 @@ export default function Experience() {
                   <span>6pm - 10:30pm</span>
                 </div>
               </div>
-              <div className="border-secondary flex justify-between border-b pt-2 pb-3">
+              <div className="border-gold flex justify-between border-b pt-2 pb-3">
                 <span className="font-light">Saturday</span>
                 <span>6pm - 1am</span>
               </div>
@@ -163,8 +163,8 @@ export default function Experience() {
             </div>
           </div>
 
-          <div className="bg-accent text-background p-12">
-            <h3 className="mb-8 font-serif text-3xl">The Dress Code</h3>
+          <div className="bg-secondary text-foreground border-primary border-2 p-12">
+            <h3 className="font-display mb-8 text-3xl">The Dress Code</h3>
             <p className="mb-6 leading-relaxed">
               Members and their guests should be elegantly dressed, and gentlemen are required to
               wear a formal blazer and smart collared shirt at all times.
