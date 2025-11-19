@@ -90,7 +90,6 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
           {/* Right Side - Reservation Form */}
           <div
             className={`transition-all duration-1000 ${
@@ -101,7 +100,7 @@ export default function Contact() {
             <div className="bg-primary border-gold border-2 p-12">
               <h3 className="text-background font-display mb-8 text-3xl">Make a Reservation</h3>
 
-              <form className="space-y-6">
+              <form className="space-y-6" suppressHydrationWarning>
                 <div>
                   <input
                     type="text"

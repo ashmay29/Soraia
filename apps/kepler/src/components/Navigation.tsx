@@ -16,32 +16,36 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 right-0 left-0 z-50 ${
         scrolled ? "bg-background/95 shadow-sm backdrop-blur-sm" : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="flex h-20 items-center justify-between">
-          <div className="animate-fade-in">
-            <h1 className="text-gold font-display text-2xl tracking-wide italic">Soraia</h1>
+          <div>
+            <h1
+              className={`${scrolled ? "text-primary" : "text-gold"} font-display text-2xl tracking-wide italic transition-colors duration-300`}
+            >
+              Soraia
+            </h1>
           </div>
 
-          <div className="animate-fade-in hidden items-center gap-12 md:flex">
+          <div className="hidden items-center gap-12 md:flex">
             <a
               href="#about"
-              className="text-foreground hover:text-gold text-xs tracking-[0.2em] uppercase transition-colors duration-300"
+              className={`${scrolled ? "text-primary" : "text-gold"} text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 md:text-base`}
             >
               About
             </a>
             <a
               href="#experience"
-              className="text-foreground hover:text-gold text-xs tracking-[0.2em] uppercase transition-colors duration-300"
+              className={`${scrolled ? "text-primary" : "text-gold"} text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 md:text-base`}
             >
               Experience
             </a>
             <a
               href="#contact"
-              className="text-foreground hover:text-gold text-xs tracking-[0.2em] uppercase transition-colors duration-300"
+              className={`${scrolled ? "text-primary" : "text-gold"} text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 md:text-base`}
             >
               Contact
             </a>
