@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import StripePattern from "./Hero/animations/StripePattern";
 
 export default function Experience() {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,7 +32,7 @@ export default function Experience() {
 
   const experiences = [
     {
-      title: "Glasshouse Dining",
+      title: "Glasshouse dining",
       description:
         "Mumbai's first glasshouse restaurant offering an immersive dining experience under the stars",
       icon: (
@@ -172,17 +171,37 @@ export default function Experience() {
             </div>
           </div>
 
-          <div className="bg-secondary text-foreground border-primary relative overflow-hidden border-2 p-12">
-            <StripePattern />
-            <div className="relative z-10">
-              <h3 className="font-display mb-8 text-3xl">The Dress Code</h3>
-              <p className="mb-6 leading-relaxed">
-                Members and their guests should be elegantly dressed, and gentlemen are required to
-                wear a formal blazer and smart collared shirt at all times.
-              </p>
-              <p className="text-gray text-sm leading-relaxed">
-                Whilst suits are actively encouraged, smart dark denim is permitted in the evening.
-              </p>
+          <div
+            className="bg-primary text-background border-gold relative border-2 p-12"
+            style={{
+              backgroundImage: "url('/background.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <h3 className="font-display mb-4 text-3xl">The Dress Code</h3>
+            <div className="bg-gold mb-8 h-px w-16"></div>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-background/80 mb-2 text-xs tracking-[0.2em] uppercase">
+                  Attire
+                </h4>
+                <p className="leading-relaxed">
+                  A polished, elegant look is encouraged at all times. Tailored jackets, collared
+                  shirts, and refined silhouettes set the tone for an intimate, elevated dining
+                  experience.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-background/80 mb-2 text-xs tracking-[0.2em] uppercase">
+                  Footwear & Accessories
+                </h4>
+                <p className="text-background/90 leading-relaxed">
+                  Closed-toe dress shoes are preferred; minimalist accessories complement the
+                  ambience. Athletic wear, flip-flops, and overly casual attire are not in keeping
+                  with our setting.
+                </p>
+              </div>
             </div>
           </div>
         </div>

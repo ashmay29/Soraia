@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <h3 className="font-display text-gold mb-4 text-3xl italic">Soraia</h3>
+            <img src="/logo/name.png" alt="Soraia" className="mb-4 h-10 w-auto" loading="lazy" />
             <p className="text-gray text-sm leading-relaxed">
               India&apos;s first modern Indian-European restaurant with an Omakase Bar
             </p>
