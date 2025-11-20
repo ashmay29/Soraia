@@ -82,90 +82,37 @@ export default function Contact() {
                     className="text-foreground hover:text-gold transition-colors duration-300"
                     aria-label="Facebook"
                   >
-                    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                    </svg>
+                    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"></svg>
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          {/* Right Side - Reservation Form */}
+          {/* Right Side - Reservation (Envelope with letter) */}
           <div
             className={`transition-all duration-1000 ${
               isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            <div className="bg-primary border-gold border-2 p-12">
-              <h3 className="text-background font-display mb-8 text-3xl">Make a Reservation</h3>
+            <div className="relative mx-auto w-full">
+              {/* Envelope image */}
+              <div className="relative -mt-40 h-[34rem] w-full rounded-md bg-[url('/envelope/openenvelope.png')] bg-[length:120%] bg-center bg-no-repeat md:bg-[length:130%] lg:h-[48rem] lg:bg-[length:140%]">
+                {/* Reservation graphic centered in the white space */}
+                <img
+                  src="/envelope/reservation.png"
+                  alt="Reservation"
+                  className="pointer-events-none absolute top-[22%] left-1/2 w-[36%] -translate-x-1/2 select-none md:top-[21%] md:w-[32%] lg:top-[32%] lg:w-[38%]"
+                  loading="lazy"
+                />
+              </div>
 
-              <form className="space-y-6" suppressHydrationWarning>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    className="border-gold text-background placeholder-gold/50 focus:border-gold w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="border-gold text-background placeholder-gold/50 focus:border-gold w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="tel"
-                    placeholder="Phone"
-                    className="border-gold text-background placeholder-gold/50 focus:border-gold w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
-                  />
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <input
-                      type="date"
-                      placeholder="Date"
-                      className="border-gold text-background placeholder-gold/50 focus:border-gold w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="time"
-                      placeholder="Time"
-                      className="border-gold text-background placeholder-gold/50 focus:border-gold w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <input
-                    type="number"
-                    placeholder="Number of Guests"
-                    min="1"
-                    className="border-gold text-background placeholder-gold/50 focus:border-gold w-full border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <textarea
-                    placeholder="Special Requests"
-                    rows={4}
-                    className="border-gold text-background placeholder-gold/50 focus:border-gold w-full resize-none border-b bg-transparent py-3 transition-colors duration-300 focus:outline-none"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="bg-gold text-primary hover:bg-accent hover:text-background border-gold w-full border-2 py-4 text-xs tracking-[0.2em] uppercase transition-colors duration-300"
-                >
-                  Request Reservation
+              {/* CTA Button below the envelope */}
+              <div className="-mt-24">
+                <button className="bg-gold text-primary hover:bg-accent hover:text-background border-gold font-display mx-auto block rounded-sm border-2 px-8 py-4 text-xs tracking-[0.2em] uppercase">
+                  MAKE A RESERVATION?
                 </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>
