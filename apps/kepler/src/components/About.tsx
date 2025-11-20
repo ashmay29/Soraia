@@ -68,7 +68,15 @@ export default function About() {
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            <div className="bg-primary relative flex aspect-4/5 items-center justify-center p-12">
+            <div
+              className="bg-primary relative flex aspect-4/5 items-center justify-center p-12"
+              style={{
+                backgroundImage: "url('/background.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
               <div className="border-gold flex h-full w-full items-center justify-center border-2 p-8">
                 <div className="text-center">
                   <div className="border-gold mx-auto mb-6 flex h-24 w-24 items-center justify-center border-2">
