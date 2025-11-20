@@ -28,10 +28,12 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20 lg:px-12">
       {/* Full-bleed background image; shift focus down to reveal more bottom */}
-      <img
-        src="3.jpeg"
+      <Image
+        src="/background/3.jpeg"
         alt=""
-        className="absolute inset-0 h-full w-full object-cover object-[center_70%]"
+        fill
+        className="object-cover object-[center_70%]"
+        priority
       />
       {/* Decorative gold linework overlays */}
       <FlowerBorder colorClass="text-gold" opacityClass={dimFlowers ? "opacity-5" : "opacity-90"} />
@@ -46,7 +48,7 @@ export default function Hero() {
           >
             <div className="mb-0.1 relative mx-auto h-32 w-96">
               <Image
-                src="/name.png"
+                src="/logo/name.png"
                 alt="Soraia"
                 fill
                 className="object-contain"

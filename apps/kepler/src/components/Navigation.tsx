@@ -33,7 +33,7 @@ export default function Navigation() {
               return (
                 <div className="relative h-6 w-28 md:h-7 md:w-32" aria-label="Soraia">
                   <Image
-                    src="/name.png"
+                    src="/logo/name.png"
                     alt="Soraia"
                     fill
                     className="object-contain"

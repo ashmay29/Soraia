@@ -40,7 +40,7 @@ export default function FlowerBorder({
       className={`pointer-events-none fixed inset-0 z-40 transition-opacity duration-500 ${opacityClass}`}
     >
       {/* Bottom Right - Rotated towards center */}
-      <div className="absolute -right-64 -bottom-64 h-[900px] w-[900px] origin-center rotate-[135deg]">
+      <div className="absolute -right-64 -bottom-64 h-[900px] w-[900px] origin-center rotate-135">
         <svg
           viewBox="0 0 2500 3000"
           className={`h-full w-full ${colorClass}`}
@@ -51,7 +51,7 @@ export default function FlowerBorder({
       </div>
 
       {/* Top Left - Rotated towards center */}
-      <div className="absolute -top-64 -left-64 h-[900px] w-[900px] origin-center rotate-[315deg]">
+      <div className="absolute -top-64 -left-64 h-[900px] w-[900px] origin-center rotate-315">
         <svg
           viewBox="0 0 2500 3000"
           className={`h-full w-full ${colorClass}`}
