@@ -71,7 +71,7 @@ export default function About() {
             <div
               className="bg-primary relative flex aspect-4/5 items-center justify-center p-12"
               style={{
-                backgroundImage: "url('/background.png')",
+                backgroundImage: "url('/background/background.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",

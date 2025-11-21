@@ -30,6 +30,13 @@
   --color-gray: var(--gray);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
+
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
 
 /* Custom styles that should override defaults */
@@ -48,5 +55,30 @@
   h5,
   h6 {
     font-family: var(--font-display);
+  }
+}
+
+/* Custom navbar responsive utilities */
+@layer utilities {
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+  }
+
+  @media (min-width: 768px) {
+    .nav-desktop {
+      display: flex;
+    }
+
+    .nav-mobile {
+      display: none;
+    }
+
+    .nav-mobile-overlay {
+      display: none !important;
+    }
   }
 }

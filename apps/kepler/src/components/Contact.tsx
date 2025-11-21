@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,13 +19,14 @@ export default function Contact() {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSection) {
+        observer.unobserve(currentSection);
       }
     };
   }, []);
@@ -97,13 +99,14 @@ export default function Contact() {
           >
             <div className="relative mx-auto w-full">
               {/* Envelope image */}
-              <div className="relative -mt-40 h-[34rem] w-full rounded-md bg-[url('/envelope/openenvelope.png')] bg-[length:120%] bg-center bg-no-repeat md:bg-[length:130%] lg:h-[48rem] lg:bg-[length:140%]">
+              <div className="relative -mt-40 h-136 w-full rounded-md bg-[url('/envelope/openenvelope.png')] bg-size-[120%] bg-center bg-no-repeat md:bg-size-[130%] lg:h-192 lg:bg-size-[140%]">
                 {/* Reservation graphic centered in the white space */}
-                <img
+                <Image
                   src="/envelope/reservation.png"
                   alt="Reservation"
+                  width={1536}
+                  height={1024}
                   className="pointer-events-none absolute top-[22%] left-1/2 w-[36%] -translate-x-1/2 select-none md:top-[21%] md:w-[32%] lg:top-[32%] lg:w-[38%]"
-                  loading="lazy"
                 />
               </div>
 
