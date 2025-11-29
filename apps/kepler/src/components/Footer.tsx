@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer
       className="bg-primary text-background relative px-6 py-16 lg:px-12"
       style={{
-        backgroundImage: "url('/background.png')",
+        backgroundImage: "url('/background/background.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -12,7 +14,13 @@ export default function Footer() {
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <img src="/logo/name.png" alt="Soraia" className="mb-4 h-10 w-auto" loading="lazy" />
+            <Image
+              src="/logo/name.png"
+              alt="Soraia"
+              width={822}
+              height={303}
+              className="mb-4 h-10 w-auto"
+            />
             <p className="text-gray text-sm leading-relaxed">
               India&apos;s first modern Indian-European restaurant with an Omakase Bar
             </p>

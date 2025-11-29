@@ -108,7 +108,7 @@ export default function Experience() {
               }`}
               style={{ transitionDelay: `${(index + 1) * 200}ms` }}
             >
-              <div className="bg-background hover:bg-primary hover:text-background group border-secondary hover:border-gold h-full border-2 p-10 transition-all duration-500 hover:bg-[url('/background.png')] hover:bg-cover hover:bg-center hover:bg-no-repeat">
+              <div className="bg-background hover:bg-primary hover:text-background group border-secondary hover:border-gold h-full border-2 p-10 transition-all duration-500 hover:bg-[url('/background/background.png')] hover:bg-cover hover:bg-center hover:bg-no-repeat">
                 <div className="text-gold group-hover:text-gold mb-6 transition-colors duration-500">
                   {exp.icon}
                 </div>
@@ -133,7 +133,7 @@ export default function Experience() {
           <div
             className="bg-primary text-background border-gold relative border-2 p-12"
             style={{
-              backgroundImage: "url('/background.png')",
+              backgroundImage: "url('/background/background.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -174,7 +174,7 @@ export default function Experience() {
           <div
             className="bg-primary text-background border-gold relative border-2 p-12"
             style={{
-              backgroundImage: "url('/background.png')",
+              backgroundImage: "url('/background/background.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

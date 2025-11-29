@@ -34,3 +34,4 @@ env/
 # Other
 *.local
 coverage/
+.vercel
