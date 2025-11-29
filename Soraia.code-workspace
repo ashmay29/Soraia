@@ -1,7 +1,7 @@
 {
   "folders": [
-    { "name": "root", "path": "." },
-    { "name": "kepler", "path": "apps/kepler" },
-    { "name": "recipe", "path": "apps/recipe" }
-  ]
+    { "name": "Soraia", "path": "." },
+    { "name": "Kepler", "path": "apps/kepler" },
+    { "name": "Recipe", "path": "apps/recipe" },
+  ],
 }
