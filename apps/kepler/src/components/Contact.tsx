@@ -37,7 +37,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           {/* Left Side - Contact Info */}
           <div
-            className={`transition-all duration-1000 ${
+            className={`relative z-10 transition-all duration-1000 ${
               isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
             }`}
           >
@@ -60,19 +60,42 @@ export default function Contact() {
                 <h3 className="text-primary mb-3 text-xs tracking-[0.2em] uppercase">
                   Reservations
                 </h3>
-                <p className="text-foreground text-lg leading-relaxed">
-                  For reservations and inquiries,
-                  <br />
-                  please contact our team
-                </p>
+                <div className="text-foreground mt-4 grid grid-cols-2 gap-x-6 gap-y-1 text-base md:text-lg">
+                  <span className="font-light">Party enquiry</span>
+                  <a
+                    href="tel:+919004958000"
+                    className="hover:text-gold justify-self-end text-right whitespace-nowrap transition-colors"
+                  >
+                    +91 90049 58000
+                  </a>
+
+                  <span className="font-light">Reservations</span>
+                  <div className="flex items-center gap-2 justify-self-end text-right whitespace-nowrap tabular-nums md:gap-3">
+                    <a
+                      href="tel:+919004938000"
+                      className="hover:text-gold text-right whitespace-nowrap transition-colors"
+                    >
+                      +91 90049 38000
+                    </a>
+                    <span className="opacity-70">•</span>
+                    <a
+                      href="tel:+919004883000"
+                      className="hover:text-gold text-right whitespace-nowrap transition-colors"
+                    >
+                      +91 90048 83000
+                    </a>
+                  </div>
+                </div>
               </div>
 
               <div>
                 <h3 className="text-primary mb-3 text-xs tracking-[0.2em] uppercase">Connect</h3>
                 <div className="flex gap-6">
                   <a
-                    href="#"
-                    className="text-foreground hover:text-gold transition-colors duration-300"
+                    href="https://www.instagram.com/soraiabombay?igsh=eXRrYTI0YmV0ZG9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-gold -m-2 inline-flex touch-manipulation items-center rounded p-2 transition-colors duration-300"
                     aria-label="Instagram"
                   >
                     <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -92,14 +115,14 @@ export default function Contact() {
           </div>
           {/* Right Side - Reservation (Envelope with letter) */}
           <div
-            className={`transition-all duration-1000 ${
+            className={`relative z-0 transition-all duration-1000 ${
               isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
             }`}
             style={{ transitionDelay: "200ms" }}
           >
             <div className="relative mx-auto w-full">
               {/* Envelope image */}
-              <div className="relative -mt-40 h-136 w-full rounded-md bg-[url('/envelope/openenvelope.png')] bg-size-[120%] bg-center bg-no-repeat md:bg-size-[130%] lg:h-192 lg:bg-size-[140%]">
+              <div className="pointer-events-none relative -mt-40 h-136 w-full rounded-md bg-[url('/envelope/openenvelope.png')] bg-size-[120%] bg-center bg-no-repeat md:bg-size-[130%] lg:h-192 lg:bg-size-[140%]">
                 {/* Reservation graphic centered in the white space */}
                 <Image
                   src="/envelope/reservation.png"
@@ -111,7 +134,7 @@ export default function Contact() {
               </div>
 
               {/* CTA Button below the envelope */}
-              <div className="-mt-24">
+              <div className="pointer-events-auto -mt-24">
                 <button className="bg-gold text-primary hover:bg-accent hover:text-background border-gold font-display mx-auto block rounded-sm border-2 px-8 py-4 text-xs tracking-[0.2em] uppercase">
                   MAKE A RESERVATION?
                 </button>
