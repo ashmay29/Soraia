@@ -131,56 +131,47 @@ export default function Experience() {
           style={{ transitionDelay: "800ms" }}
         >
           <div
-            className="bg-primary text-background border-gold relative border-2 p-12"
+            className="bg-primary/95 text-background border-gold relative border-2 p-12 shadow-xl backdrop-blur-sm"
             style={{
               backgroundImage: "url('/background/background.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            <h3 className="font-display mb-8 text-3xl">Opening Hours</h3>
-            <div className="space-y-4">
-              <div className="border-gold flex justify-between border-b pb-3">
-                <span className="font-light">Monday - Friday</span>
-                <span>11:00am - 1am</span>
+            <h3 className="font-display mb-3 text-3xl">Opening Hours</h3>
+            <div className="bg-gold/80 mb-8 h-[2px] w-20"></div>
+            <div className="space-y-4 text-base">
+              <div className="border-gold/60 flex items-center justify-between border-b pb-4">
+                <span className="font-light tracking-wide">Monday – Sunday</span>
+                <span className="text-xs tracking-[0.2em] uppercase">Open</span>
               </div>
-              <div className="space-y-2 pl-4 text-sm">
-                <div className="flex justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="font-light">Breakfast</span>
+                  <span className="opacity-70">—</span>
+                </div>
+                <div className="flex items-center justify-between">
                   <span className="font-light">Lunch</span>
-                  <span>12pm - 3pm</span>
+                  <span className="opacity-70">—</span>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex items-center justify-between">
                   <span className="font-light">Dinner</span>
-                  <span>6pm - 10:30pm</span>
+                  <span>7pm–9pm • 10pm–12am</span>
                 </div>
-              </div>
-              <div className="border-gold flex justify-between border-b pt-2 pb-3">
-                <span className="font-light">Saturday</span>
-                <span>6pm - 1am</span>
-              </div>
-              <div className="pl-4 text-sm">
-                <div className="flex justify-between">
-                  <span className="font-light">Dinner</span>
-                  <span>6pm - 10:30pm</span>
-                </div>
-              </div>
-              <div className="flex justify-between pt-2">
-                <span className="font-light">Sunday</span>
-                <span className="text-gray">Closed</span>
               </div>
             </div>
           </div>
 
           <div
-            className="bg-primary text-background border-gold relative border-2 p-12"
+            className="bg-primary/95 text-background border-gold relative border-2 p-12 shadow-xl backdrop-blur-sm"
             style={{
               backgroundImage: "url('/background/background.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            <h3 className="font-display mb-4 text-3xl">The Dress Code</h3>
-            <div className="bg-gold mb-8 h-px w-16"></div>
+            <h3 className="font-display mb-3 text-3xl">The Dress Code</h3>
+            <div className="bg-gold/80 mb-8 h-[2px] w-20"></div>
             <div className="space-y-6">
               <div>
                 <h4 className="text-background/80 mb-2 text-xs tracking-[0.2em] uppercase">
