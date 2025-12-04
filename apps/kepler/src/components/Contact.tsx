@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -113,32 +112,38 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          {/* Right Side - Reservation (Envelope with letter) */}
+          {/* Right Side - Reservation Card */}
           <div
-            className={`relative z-0 transition-all duration-1000 ${
+            className={`relative z-0 h-full transition-all duration-1000 ${
               isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            <div className="relative mx-auto w-full">
-              {/* Envelope image */}
-              <div className="pointer-events-none relative -mt-40 h-136 w-full rounded-md bg-[url('/envelope/openenvelope.png')] bg-size-[120%] bg-center bg-no-repeat md:bg-size-[130%] lg:h-192 lg:bg-size-[140%]">
-                {/* Reservation graphic centered in the white space */}
+            <div
+              className="bg-primary/95 text-background border-gold relative flex h-full min-h-[400px] w-full flex-col items-center justify-center border-2 p-12 text-center shadow-xl backdrop-blur-sm"
+              style={{
+                backgroundImage: "url('/background/background.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="mb-8 w-64 md:w-80">
                 <Image
                   src="/envelope/reservation.png"
                   alt="Reservation"
                   width={1536}
                   height={1024}
-                  className="pointer-events-none absolute top-[22%] left-1/2 w-[36%] -translate-x-1/2 select-none md:top-[21%] md:w-[32%] lg:top-[32%] lg:w-[38%]"
+                  className="h-auto w-full object-contain"
+                  style={{ filter: "brightness(0) invert(1)" }}
                 />
               </div>
-
-              {/* CTA Button below the envelope */}
-              <div className="pointer-events-auto -mt-24">
-                <button className="bg-gold text-primary hover:bg-accent hover:text-background border-gold font-display mx-auto block rounded-sm border-2 px-8 py-4 text-xs tracking-[0.2em] uppercase">
-                  MAKE A RESERVATION?
-                </button>
-              </div>
+              <p className="text-light font-body mb-10 max-w-md text-lg leading-relaxed opacity-90">
+                Experience the essence of Soraia. We recommend booking in advance to ensure your
+                preferred seating arrangements.
+              </p>
+              <button className="bg-gold text-primary hover:bg-light hover:text-primary font-display inline-block px-10 py-4 text-xs tracking-[0.2em] uppercase transition-all duration-300">
+                Book Now
+              </button>
             </div>
           </div>
         </div>
