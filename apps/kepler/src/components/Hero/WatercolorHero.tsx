@@ -7,12 +7,12 @@ import { motion, AnimatePresence } from "framer-motion";
 const HERO_IMAGES = [
   { src: "/hero/DSC00869-Edit-2.jpg", mask: "/ink-mask.png", mobileScale: "scale-[1.8]" },
   { src: "/hero/DSC00880-Edit.jpg", mask: "/ink-mask-2.png", mobileScale: "scale-[1.8]" },
-  { src: "/hero/DSC00958-Edit.jpg", mask: "/ink-mask-3.png", mobileScale: "scale-[1.3]" },
+  { src: "/hero/DSC00958-Edit.jpg", mask: "/ink-mask-3.png", mobileScale: "scale-[1.8]" },
   {
     src: "/hero/DSC01018-Edit.jpg",
     mask: "/ink-mask-4.png",
-    mobileScale: "scale-[1.3]",
-    additionalTransform: "translateX(-90px) translateY(140px) scale(0.9)", // Switching to X axis to move horizontally on screen
+    mobileScale: "scale-[1.8]",
+    additionalTransform: "translateX(-40px) translateY(80px) scale(0.9)", // Switching to X axis to move horizontally on screen
   },
 ];
 
@@ -48,7 +48,7 @@ export default function WatercolorHero() {
           >
             {/* 2. The Mask Application */}
             <div
-              className="relative h-full w-full"
+              className={`relative h-full w-full rotate-90 md:scale-100 ${HERO_IMAGES[currentIndex].mobileScale}`}
               style={{
                 // Mask properties
                 maskImage: `url('${HERO_IMAGES[currentIndex].mask}')`,
@@ -59,10 +59,6 @@ export default function WatercolorHero() {
                 WebkitMaskSize: "contain",
                 WebkitMaskRepeat: "no-repeat",
                 WebkitMaskPosition: "center",
-
-                // ROTATION LOGIC:
-                // Rotate the container 90deg to make the horizontal ink splatter vertical
-                transform: "rotate(90deg)",
               }}
             >
               {/* 3. The Image (with Counter-Scale) */}
