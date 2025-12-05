@@ -99,10 +99,10 @@ export default function Navigation() {
 
               <div className="flex items-center gap-8 lg:gap-12">
                 <a
-                  href="#locations"
+                  href="/menu"
                   className={`${scrolled ? "text-primary" : "text-gold"} text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:text-white`}
                 >
-                  Locations
+                  Menu
                 </a>
                 <a
                   href="#contact"
@@ -189,7 +189,7 @@ export default function Navigation() {
             {[
               { label: "About", href: "#about" },
               { label: "Experience", href: "#experience" },
-              { label: "Locations", href: "#locations" },
+              { label: "Menu", href: "/menu" },
               { label: "Contact", href: "#contact" },
               { label: "Book Now", href: "#book" },
             ].map((item) => (
