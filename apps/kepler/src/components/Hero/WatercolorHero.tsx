@@ -31,14 +31,20 @@ export default function WatercolorHero() {
       {/* 1. The Mask Container (Fixed Aspect Ratio) */}
       {/* Aspect ratio set to portrait (4:5) to match the vertical design */}
       <div className="relative aspect-4/5 w-full max-w-4xl md:w-[90%]">
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence>
           <motion.div
             key={currentIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.8, ease: "easeInOut" }}
-            className={`absolute inset-0 h-full w-full ${HERO_IMAGES[currentIndex].mobileScale} md:scale-100`}
+            initial={{ opacity: 1, scale: 0.4, zIndex: 10, filter: "blur(0px)" }}
+            animate={{ opacity: 1, scale: 1, zIndex: 10, filter: "blur(0px)" }}
+            exit={{ opacity: 0, scale: 0.95, zIndex: 0, filter: "blur(8px)" }}
+            transition={{
+              duration: 1.4,
+              ease: [0.4, 0, 0.2, 1],
+              opacity: { duration: 0.8, delay: 0.8 }, // Smooth, earlier dissolve
+              filter: { duration: 0.8, delay: 0.8 }, // Blur in sync with fade
+              scale: { duration: 1.4, ease: [0.4, 0, 0.2, 1] }, // Consistent scale easing
+            }}
+            className="absolute inset-0 h-full w-full md:scale-100"
           >
             {/* 2. The Mask Application */}
             <div
@@ -59,24 +65,32 @@ export default function WatercolorHero() {
                 transform: "rotate(90deg)",
               }}
             >
-              {/* 3. The Image */}
-              <Image
-                src={HERO_IMAGES[currentIndex].src}
-                alt="Soraia Interiors"
-                fill
-                className="object-cover"
-                priority={currentIndex === 0}
-                // Scale is slightly increased (1.1) to ensure no edges are cut off during rotation
-                style={{
-                  transform: `rotate(-90deg) scale(1) ${HERO_IMAGES[currentIndex].additionalTransform || ""}`,
-                }}
-              />
+              {/* 3. The Image (with Counter-Scale) */}
+              <motion.div
+                className="relative h-full w-full"
+                initial={{ scale: 2.5 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 1.4, ease: [0.4, 0, 0.2, 1] }}
+              >
+                <Image
+                  src={HERO_IMAGES[currentIndex].src}
+                  alt="Soraia Interiors"
+                  fill
+                  className="object-cover"
+                  priority={currentIndex === 0}
+                  // Scale is slightly increased (1.1) to ensure no edges are cut off during rotation
+                  style={{
+                    transform: `rotate(-90deg) scale(1) ${HERO_IMAGES[currentIndex].additionalTransform || ""}`,
+                  }}
+                />
+              </motion.div>
               {/* 4. Optional Paper Texture Overlay (Inside Mask) */}
               <div
                 className="pointer-events-none absolute inset-0 z-10 bg-[url('/paper-texture.png')] bg-cover opacity-30 mix-blend-multiply"
                 style={{ transform: "rotate(-90deg) scale(1)" }}
               />
             </div>
+            {/* Texture moved outside if needed, but keeping inside mask as per original logic */}
           </motion.div>
         </AnimatePresence>
       </div>

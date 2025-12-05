@@ -27,7 +27,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20 lg:px-12">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#1a3d2f] px-6 pt-20 lg:px-12">
       {/* Full-bleed background image; shift focus down to reveal more bottom */}
       <Image
         src="/background/3.jpeg"
