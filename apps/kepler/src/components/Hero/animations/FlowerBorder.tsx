@@ -1,6 +1,5 @@
 import React from "react";
 import { flowerPaths } from "./FlowerPaths";
-import { GOLD_FILTER } from "@/lib/filters";
 
 type Props = {
   colorClass?: string; // e.g. "text-gold" or "text-primary"
@@ -15,9 +14,8 @@ export default function FlowerBorder({
   // Each path starts 80ms after the previous one for smooth sequential drawing
   const getAnimationDelay = (index: number) => index * 80;
 
-  const isGold = colorClass === "text-gold";
-  // If using the gold filter, use a neutral color (black) as the base so the filter applies correctly
-  const svgColorClass = isGold ? "text-black" : colorClass;
+  // We use the color class directly instead of a filter for better cross-browser/device compatibility
+  const svgColorClass = colorClass;
 
   const botanicalFlower = (
     <g
@@ -27,7 +25,7 @@ export default function FlowerBorder({
       strokeLinecap="round"
       strokeLinejoin="round"
       style={{
-        filter: isGold ? GOLD_FILTER : "none",
+        filter: "none",
       }}
     >
       {flowerPaths.map((pathData, index) => (
