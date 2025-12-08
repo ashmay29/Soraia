@@ -419,7 +419,7 @@ function ClassicCocktailsSection() {
             style={{ transitionDelay: "200ms" }}
           >
             <div
-              className="bg-primary relative aspect-4/5"
+              className="bg-primary relative aspect-4/5 p-4 md:p-12"
               style={{
                 backgroundImage: "url('/background/background.png')",
                 backgroundSize: "cover",
@@ -427,27 +427,65 @@ function ClassicCocktailsSection() {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <div className="border-gold flex h-full w-full items-center justify-center border-2 p-8">
-                <div className="text-center">
-                  <div className="border-gold mx-auto mb-6 flex h-24 w-24 items-center justify-center border-2">
-                    <svg
-                      className="text-gold h-12 w-12"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                      />
-                    </svg>
+              <div className="border-gold relative flex h-full w-full items-center justify-center border-2">
+                {/* Paper Content Container */}
+                <div className="relative h-full w-full overflow-hidden shadow-inner">
+                  {/* Paper Texture */}
+                  <div className="absolute inset-0 z-0">
+                    <Image
+                      src="/paper-texture.png"
+                      alt="Paper Texture"
+                      fill
+                      className="object-cover opacity-90"
+                    />
                   </div>
-                  <h3 className="text-gold font-display mb-4 text-2xl">Classic Cocktails</h3>
-                  <p className="text-background text-sm leading-relaxed">
-                    Timeless favorites crafted to perfection
-                  </p>
+
+                  {/* Image Collage Grid - Layout 1: Large Left + 2 Stacked Right */}
+                  <div className="absolute inset-4 z-10 grid grid-cols-2 grid-rows-6 gap-2 md:inset-8">
+                    {/* Left - Large Vertical */}
+                    <div className="relative col-span-1 row-span-6 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/menu/Cocktails1.jpeg"
+                        alt="Classic Cocktails 1"
+                        fill
+                        className="object-cover shadow-md"
+                      />
+                    </div>
+
+                    {/* Top Right - Medium Horizontal */}
+                    <div className="relative col-span-1 row-span-3 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/menu/Cocktails2.jpeg"
+                        alt="Classic Cocktails 2"
+                        fill
+                        className="object-cover shadow-md"
+                      />
+                    </div>
+
+                    {/* Bottom Right - Medium Horizontal */}
+                    <div className="relative col-span-1 row-span-3 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/menu/Cocktails3.jpeg"
+                        alt="Classic Cocktails 3"
+                        fill
+                        className="object-cover shadow-md"
+                      />
+                    </div>
+
+                    {/* Text Overlay */}
+                    <div className="pointer-events-none absolute top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
+                      <h3
+                        className="font-display bg-cover bg-clip-text bg-center text-2xl tracking-widest text-transparent md:text-5xl"
+                        style={{
+                          backgroundImage: "url('/paper-texture.png')",
+                          WebkitBackgroundClip: "text",
+                          filter: "brightness(1.1) contrast(0.9)",
+                        }}
+                      >
+                        COCKTAILS
+                      </h3>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -528,12 +566,12 @@ function CraftBeveragesSection() {
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           {/* Left Content - Image */}
           <div
-            className={`transition-all duration-1000 ${
+            className={`order-2 transition-all duration-1000 lg:order-none ${
               isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
             }`}
           >
             <div
-              className="bg-primary relative aspect-4/5"
+              className="bg-primary relative aspect-4/5 p-4 md:p-12"
               style={{
                 backgroundImage: "url('/background/background.png')",
                 backgroundSize: "cover",
@@ -541,27 +579,65 @@ function CraftBeveragesSection() {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <div className="border-gold flex h-full w-full items-center justify-center border-2 p-8">
-                <div className="text-center">
-                  <div className="border-gold mx-auto mb-6 flex h-24 w-24 items-center justify-center border-2">
-                    <svg
-                      className="text-gold h-8 w-8"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                      />
-                    </svg>
+              <div className="border-gold relative flex h-full w-full items-center justify-center border-2">
+                {/* Paper Content Container */}
+                <div className="relative h-full w-full overflow-hidden shadow-inner">
+                  {/* Paper Texture */}
+                  <div className="absolute inset-0 z-0">
+                    <Image
+                      src="/paper-texture.png"
+                      alt="Paper Texture"
+                      fill
+                      className="object-cover opacity-90"
+                    />
                   </div>
-                  <h3 className="text-gold font-display mb-4 text-2xl">Premium Spirits</h3>
-                  <p className="text-background text-sm leading-relaxed">
-                    Finest liqueurs and vodkas
-                  </p>
+
+                  {/* Image Collage Grid - Layout 2: 2 Stacked Left + Large Right */}
+                  <div className="absolute inset-4 z-10 grid grid-cols-2 grid-rows-6 gap-2 md:inset-8">
+                    {/* Top Left - Medium Horizontal */}
+                    <div className="relative col-span-1 row-span-3 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/menu/Vodka1.jpeg"
+                        alt="Liqueur & Vodka 1"
+                        fill
+                        className="object-cover shadow-md"
+                      />
+                    </div>
+
+                    {/* Right - Large Vertical */}
+                    <div className="relative col-span-1 row-span-6 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/menu/Vodka2.jpeg"
+                        alt="Liqueur & Vodka 2"
+                        fill
+                        className="object-cover shadow-md"
+                      />
+                    </div>
+
+                    {/* Bottom Left - Medium Horizontal */}
+                    <div className="relative col-span-1 row-span-3 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/menu/Vodka3.jpeg"
+                        alt="Liqueur & Vodka 3"
+                        fill
+                        className="object-cover shadow-md"
+                      />
+                    </div>
+
+                    {/* Text Overlay */}
+                    <div className="pointer-events-none absolute top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
+                      <h3
+                        className="font-display bg-cover bg-clip-text bg-center text-2xl tracking-widest text-transparent md:text-5xl"
+                        style={{
+                          backgroundImage: "url('/paper-texture.png')",
+                          WebkitBackgroundClip: "text",
+                          filter: "brightness(1.1) contrast(0.9)",
+                        }}
+                      >
+                        SPIRITS
+                      </h3>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -569,7 +645,7 @@ function CraftBeveragesSection() {
 
           {/* Right Content - Two Column Drink List */}
           <div
-            className={`transition-all duration-1000 ${
+            className={`order-1 transition-all duration-1000 lg:order-none ${
               isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
             }`}
             style={{ transitionDelay: "200ms" }}
@@ -726,7 +802,7 @@ function MezcalGinSection() {
             style={{ transitionDelay: "200ms" }}
           >
             <div
-              className="bg-primary relative aspect-4/5"
+              className="bg-primary relative aspect-4/5 p-4 md:p-12"
               style={{
                 backgroundImage: "url('/background/background.png')",
                 backgroundSize: "cover",
@@ -734,27 +810,75 @@ function MezcalGinSection() {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <div className="border-gold flex h-full w-full items-center justify-center border-2 p-8">
-                <div className="text-center">
-                  <div className="border-gold mx-auto mb-6 flex h-24 w-24 items-center justify-center border-2">
-                    <svg
-                      className="text-gold h-12 w-12"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                      />
-                    </svg>
+              <div className="border-gold relative flex h-full w-full items-center justify-center border-2">
+                {/* Paper Content Container */}
+                <div className="relative h-full w-full overflow-hidden shadow-inner">
+                  {/* Paper Texture */}
+                  <div className="absolute inset-0 z-0">
+                    <Image
+                      src="/paper-texture.png"
+                      alt="Paper Texture"
+                      fill
+                      className="object-cover opacity-90"
+                    />
                   </div>
-                  <h3 className="text-gold font-display mb-4 text-2xl">Mezcal & Gin</h3>
-                  <p className="text-background text-sm leading-relaxed">
-                    Artisanal spirits selection
-                  </p>
+
+                  {/* Image Collage Grid - Layout 3: Like Harmonious Experience */}
+                  <div className="absolute inset-4 z-10 grid grid-cols-2 grid-rows-6 gap-2 md:inset-8">
+                    {/* Top Left - Large Vertical */}
+                    <div className="relative col-span-1 row-span-4 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/menu/Gin1.jpeg"
+                        alt="Mezcal & Gin 1"
+                        fill
+                        className="object-cover shadow-md"
+                      />
+                    </div>
+
+                    {/* Top Right - Small Square */}
+                    <div className="relative col-span-1 row-span-2 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/menu/Gin2.jpeg"
+                        alt="Mezcal & Gin 2"
+                        fill
+                        className="object-cover shadow-md"
+                      />
+                    </div>
+
+                    {/* Middle Right - Medium Horizontal */}
+                    <div className="relative col-span-1 row-span-2 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/menu/Gin3.jpeg"
+                        alt="Mezcal & Gin 3"
+                        fill
+                        className="object-cover shadow-md"
+                      />
+                    </div>
+
+                    {/* Bottom - Wide Horizontal spanning both columns */}
+                    <div className="relative col-span-2 row-span-2 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/menu/Gin4.jpeg"
+                        alt="Mezcal & Gin 4"
+                        fill
+                        className="object-cover object-[center_30%] shadow-md"
+                      />
+                    </div>
+
+                    {/* Text Overlay */}
+                    <div className="pointer-events-none absolute top-[63%] left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
+                      <h3
+                        className="font-display bg-cover bg-clip-text bg-center text-3xl tracking-widest text-transparent md:text-6xl"
+                        style={{
+                          backgroundImage: "url('/paper-texture.png')",
+                          WebkitBackgroundClip: "text",
+                          filter: "brightness(1.1) contrast(0.9)",
+                        }}
+                      >
+                        MEZCAL & GIN
+                      </h3>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
