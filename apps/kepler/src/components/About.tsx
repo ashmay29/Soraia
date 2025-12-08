@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,13 +19,14 @@ export default function About() {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSection) {
+        observer.unobserve(currentSection);
       }
     };
   }, []);
@@ -77,27 +79,75 @@ export default function About() {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <div className="border-gold flex h-full w-full items-center justify-center border-2 p-8">
-                <div className="text-center">
-                  <div className="border-gold mx-auto mb-6 flex h-24 w-24 items-center justify-center border-2">
-                    <svg
-                      className="text-gold h-12 w-12"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                      />
-                    </svg>
+              <div className="border-gold relative flex h-full w-full items-center justify-center border-2">
+                {/* Paper Content Container */}
+                <div className="relative h-full w-full overflow-hidden shadow-inner">
+                  {/* Paper Texture */}
+                  <div className="absolute inset-0 z-0">
+                    <Image
+                      src="/paper-texture.png"
+                      alt="Paper Texture"
+                      fill
+                      className="object-cover opacity-90"
+                    />
                   </div>
-                  <h3 className="text-gold font-display mb-4 text-2xl">Culinary Excellence</h3>
-                  <p className="text-background text-sm leading-relaxed">
-                    Where tradition meets innovation
-                  </p>
+
+                  {/* Straight Collage Grid */}
+                  <div className="absolute inset-8 z-10 grid grid-cols-2 grid-rows-6 gap-2">
+                    {/* Top Left - Large Vertical */}
+                    <div className="relative col-span-1 row-span-4 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/DSC00869-Edit-2.jpg"
+                        alt="Experience 1"
+                        fill
+                        className="object-cover shadow-md"
+                      />
+                    </div>
+
+                    {/* Top Right - Small Square */}
+                    <div className="relative col-span-1 row-span-2 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/DSC00880-Edit.jpg"
+                        alt="Experience 2"
+                        fill
+                        className="object-cover shadow-md"
+                      />
+                    </div>
+
+                    {/* Middle Right - Medium Horizontal */}
+                    <div className="relative col-span-1 row-span-2 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/DSC01018-Edit.jpg"
+                        alt="Experience 3"
+                        fill
+                        className="object-cover shadow-md"
+                      />
+                    </div>
+
+                    {/* Bottom - Wide Horizontal spanning mostly bottom */}
+                    <div className="relative col-span-2 row-span-2 transition-transform hover:scale-[1.02]">
+                      <Image
+                        src="/DSC00958-Edit.jpg"
+                        alt="Experience 4"
+                        fill
+                        className="object-cover object-[center_30%] shadow-md"
+                      />
+                    </div>
+
+                    {/* Ambience Text Overlay */}
+                    <div className="pointer-events-none absolute top-[63%] left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
+                      <h3
+                        className="font-display bg-cover bg-clip-text bg-center text-6xl tracking-widest text-transparent"
+                        style={{
+                          backgroundImage: "url('/paper-texture.png')",
+                          WebkitBackgroundClip: "text",
+                          filter: "brightness(1.1) contrast(0.9)", // Slight adjustment to match paper aesthetic
+                        }}
+                      >
+                        AMBIENCE
+                      </h3>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
