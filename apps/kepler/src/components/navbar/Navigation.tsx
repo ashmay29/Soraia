@@ -2,13 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { PRIMARY_FILTER, WHITE_FILTER } from "@/lib/filters";
 
 // Shared image color filters (avoid duplication)
-const GOLD_FILTER =
-  "brightness(0) saturate(100%) invert(78%) sepia(57%) saturate(462%) hue-rotate(356deg) brightness(95%) contrast(92%)";
-const PRIMARY_FILTER =
-  "brightness(0) saturate(100%) invert(12%) sepia(21%) saturate(1068%) hue-rotate(116deg) brightness(90%) contrast(93%)";
-const WHITE_FILTER = "brightness(0) invert(1)";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -83,19 +80,19 @@ export default function Navigation() {
               </div>
 
               {/* Logo */}
-              <div className="relative h-8 w-32 md:h-10 md:w-40" aria-label="Soraia">
+              <Link href="/" aria-label="Home" className="relative block h-8 w-32 md:h-10 md:w-40">
                 <Image
                   src="/logo/name.png"
                   alt="Soraia"
                   fill
                   className="object-contain transition-all duration-300"
                   style={{
-                    filter: isMenuOpen ? WHITE_FILTER : scrolled ? PRIMARY_FILTER : GOLD_FILTER,
+                    filter: isMenuOpen ? WHITE_FILTER : scrolled ? PRIMARY_FILTER : "none",
                   }}
                   priority
                   sizes="(max-width: 768px) 7rem, 10rem"
                 />
-              </div>
+              </Link>
 
               <div className="flex items-center gap-8 lg:gap-12">
                 <a
@@ -128,19 +125,19 @@ export default function Navigation() {
           <div className="nav-mobile w-full items-center justify-between">
             <div className="z-50">
               {/* Logo image replacing text title, color-tinted via CSS filter */}
-              <div className="relative h-6 w-28" aria-label="Soraia">
+              <Link href="/" aria-label="Home" className="relative block h-6 w-28">
                 <Image
                   src="/logo/name.png"
                   alt="Soraia"
                   fill
                   className="object-contain transition-all duration-300"
                   style={{
-                    filter: isMenuOpen ? WHITE_FILTER : scrolled ? PRIMARY_FILTER : GOLD_FILTER,
+                    filter: isMenuOpen ? WHITE_FILTER : scrolled ? PRIMARY_FILTER : "none",
                   }}
                   priority
                   sizes="(max-width: 768px) 7rem, 8rem"
                 />
-              </div>
+              </Link>
             </div>
 
             {/* Mobile Hamburger Button */}

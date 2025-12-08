@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Navigation from "@/components/navbar/Navigation";
 import Image from "next/image";
 import FlowerBorder from "@/components/Hero/animations/FlowerBorder";
+import Footer from "@/components/Footer";
+import { GOLD_FILTER } from "@/lib/filters";
 
 // Menu data structure
 const menuData = [
@@ -148,8 +150,19 @@ export default function MenuPage() {
         />
         <div className="relative z-10 mx-auto w-full max-w-7xl">
           <div className="text-center">
-            {/* Menu Title */}
-            <h1 className="font-display text-gold mb-8 text-6xl tracking-wide">Menu</h1>
+            {/* Menu Logo */}
+            <div className="flex w-full justify-center">
+              <div className="relative h-48 w-48 md:h-72 md:w-72 lg:h-96 lg:w-96">
+                <Image
+                  src="/logo/menu.png"
+                  alt="Menu"
+                  fill
+                  className="object-contain"
+                  style={{ filter: GOLD_FILTER }}
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -165,6 +178,9 @@ export default function MenuPage() {
 
       {/* Section 3: Mezcal & Gin - Two Column Drink List on Left, Image on Right */}
       <MezcalGinSection />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
@@ -206,14 +222,15 @@ function ThreeColumnMenuSection() {
               isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
             }`}
           >
-            <div className="relative h-full min-h-[2000px] overflow-hidden rounded-sm">
-              <Image
-                src="/background/background.png"
-                alt="Menu background"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <div
+              className="relative h-full min-h-[2000px] overflow-hidden rounded-sm"
+              style={{
+                backgroundImage: "url('/background/background.png')",
+                backgroundSize: "contain",
+                backgroundRepeat: "repeat-y",
+                backgroundPosition: "center top",
+              }}
+            ></div>
           </div>
 
           {/* CENTER COLUMN - Menu Content */}
@@ -259,14 +276,15 @@ function ThreeColumnMenuSection() {
             }`}
             style={{ transitionDelay: "400ms" }}
           >
-            <div className="relative h-full min-h-[2000px] overflow-hidden rounded-sm">
-              <Image
-                src="/background/background.png"
-                alt="Menu background"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <div
+              className="relative h-full min-h-[2000px] overflow-hidden rounded-sm"
+              style={{
+                backgroundImage: "url('/background/background.png')",
+                backgroundSize: "contain",
+                backgroundRepeat: "repeat-y",
+                backgroundPosition: "center top",
+              }}
+            ></div>
           </div>
         </div>
       </div>

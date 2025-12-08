@@ -71,7 +71,7 @@ export default function About() {
             style={{ transitionDelay: "200ms" }}
           >
             <div
-              className="bg-primary relative flex aspect-4/5 items-center justify-center p-12"
+              className="bg-primary relative flex aspect-4/5 items-center justify-center p-4 md:p-12"
               style={{
                 backgroundImage: "url('/background/background.png')",
                 backgroundSize: "cover",
@@ -93,7 +93,7 @@ export default function About() {
                   </div>
 
                   {/* Straight Collage Grid */}
-                  <div className="absolute inset-8 z-10 grid grid-cols-2 grid-rows-6 gap-2">
+                  <div className="absolute inset-4 z-10 grid grid-cols-2 grid-rows-6 gap-2 md:inset-8">
                     {/* Top Left - Large Vertical */}
                     <div className="relative col-span-1 row-span-4 transition-transform hover:scale-[1.02]">
                       <Image
@@ -137,7 +137,7 @@ export default function About() {
                     {/* Ambience Text Overlay */}
                     <div className="pointer-events-none absolute top-[63%] left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
                       <h3
-                        className="font-display bg-cover bg-clip-text bg-center text-6xl tracking-widest text-transparent"
+                        className="font-display bg-cover bg-clip-text bg-center text-3xl tracking-widest text-transparent md:text-6xl"
                         style={{
                           backgroundImage: "url('/paper-texture.png')",
                           WebkitBackgroundClip: "text",

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import FlowerBorder from "@/components/Hero/animations/FlowerBorder";
+import { GOLD_FILTER } from "@/lib/filters";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,8 +36,11 @@ export default function Hero() {
         className="object-cover object-[center_70%]"
         priority
       />
-      {/* Decorative gold linework overlays */}
-      <FlowerBorder colorClass="text-gold" opacityClass={dimFlowers ? "opacity-5" : "opacity-90"} />
+      {/* Decorative linework overlays - changes from gold to green when dimmed */}
+      <FlowerBorder
+        colorClass={dimFlowers ? "text-primary" : "text-gold"}
+        opacityClass={dimFlowers ? "opacity-5" : "opacity-90"}
+      />
       <div className="relative z-10 mx-auto w-full max-w-7xl">
         <div className="text-center">
           {/* Main Title */}
@@ -53,8 +57,7 @@ export default function Hero() {
                 fill
                 className="object-contain"
                 style={{
-                  filter:
-                    "brightness(0) saturate(100%) invert(78%) sepia(57%) saturate(462%) hue-rotate(356deg) brightness(95%) contrast(92%)",
+                  filter: GOLD_FILTER,
                 }}
                 priority
                 sizes="(max-width: 768px) 100vw, 384px"
