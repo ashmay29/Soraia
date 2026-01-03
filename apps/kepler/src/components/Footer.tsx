@@ -86,6 +86,14 @@ export default function Footer() {
             >
               Terms of Service
             </a>
+            <a
+              href="https://eigensu.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray hover:text-background text-sm transition-colors duration-300"
+            >
+              Powered by Eigensu
+            </a>
           </div>
         </div>
       </div>
