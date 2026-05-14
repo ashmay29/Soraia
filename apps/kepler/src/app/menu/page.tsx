@@ -152,7 +152,7 @@ export default function MenuPage() {
           <div className="text-center">
             {/* Menu Logo */}
             <div className="flex w-full justify-center">
-              <div className="relative h-48 w-48 md:h-72 md:w-72 lg:h-96 lg:w-96">
+              <div className="relative h-96 w-96 md:h-72 md:w-72 lg:h-96 lg:w-96">
                 <Image
                   src="/logo/menu.png"
                   alt="Menu"

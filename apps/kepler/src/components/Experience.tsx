@@ -152,11 +152,11 @@ export default function Experience() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="font-light">Lunch</span>
-                  <span className="opacity-70">—</span>
+                  <span>12pm–4pm</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="font-light">Dinner</span>
-                  <span>7pm–9pm • 10pm–12am</span>
+                  <span>7pm–1am</span>
                 </div>
               </div>
             </div>
