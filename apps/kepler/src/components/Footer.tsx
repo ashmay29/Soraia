@@ -32,7 +32,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#about"
+                  href="/#about"
                   className="text-background hover:text-gold transition-colors duration-300"
                 >
                   About
@@ -40,7 +40,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#experience"
+                  href="/#experience"
                   className="text-background hover:text-gold transition-colors duration-300"
                 >
                   Experience
@@ -48,7 +48,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/#contact"
                   className="text-background hover:text-gold transition-colors duration-300"
                 >
                   Contact
@@ -71,9 +71,15 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-gold flex flex-col items-center justify-between gap-4 border-t pt-8 md:flex-row">
           <p className="text-background/70 text-sm">
-            © {new Date().getFullYear()} Soraia. All rights reserved.
+            © {new Date().getFullYear()} Soraia Innercircle Hospitality LLP. All rights reserved.
           </p>
           <div className="flex gap-6">
+            <a
+              href="https://eigensu.in"
+              className="text-gray hover:text-background text-sm transition-colors duration-300"
+            >
+              Designed & Developed by @Eigensu
+            </a>
             <a
               href="#"
               className="text-gray hover:text-background text-sm transition-colors duration-300"

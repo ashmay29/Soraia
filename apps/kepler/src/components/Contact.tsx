@@ -31,7 +31,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <section id="contact" ref={sectionRef} className="bg-background px-6 py-32 lg:px-12">
+    <section ref={sectionRef} className="bg-background px-6 py-20 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           {/* Left Side - Contact Info */}
@@ -67,23 +67,6 @@ export default function Contact() {
                   >
                     +91 90049 58000
                   </a>
-
-                  <span className="font-light">Reservations</span>
-                  <div className="flex items-center gap-2 justify-self-end text-right whitespace-nowrap tabular-nums md:gap-3">
-                    <a
-                      href="tel:+919004938000"
-                      className="hover:text-gold text-right whitespace-nowrap transition-colors"
-                    >
-                      +91 90049 38000
-                    </a>
-                    <span className="opacity-70">•</span>
-                    <a
-                      href="tel:+919004883000"
-                      className="hover:text-gold text-right whitespace-nowrap transition-colors"
-                    >
-                      +91 90048 83000
-                    </a>
-                  </div>
                 </div>
               </div>
 

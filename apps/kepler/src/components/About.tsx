@@ -32,7 +32,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="bg-background px-6 py-32 lg:px-12">
+    <section id="about" ref={sectionRef} className="bg-background px-6 pt-20 pb-10 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           {/* Left Content */}

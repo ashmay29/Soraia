@@ -79,11 +79,11 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" ref={sectionRef} className="bg-background px-6 py-32 lg:px-12">
+    <section id="experience" ref={sectionRef} className="bg-background px-6 pt-10 pb-8 lg:px-12">
       <div className="mx-auto max-w-7xl">
         {/* Section Title */}
         <div
-          className={`mb-20 text-center transition-all duration-1000 ${
+          className={`mb-12 text-center transition-all duration-1000 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
@@ -125,7 +125,7 @@ export default function Experience() {
 
         {/* Opening Hours Section */}
         <div
-          className={`mt-24 grid grid-cols-1 gap-16 transition-all duration-1000 lg:grid-cols-2 ${
+          className={`mt-12 grid grid-cols-1 gap-16 transition-all duration-1000 lg:grid-cols-2 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
           style={{ transitionDelay: "800ms" }}

@@ -65,18 +65,18 @@ export default function Navigation() {
             {/* Center Section: Links - Logo - Links */}
             <div className="flex flex-1 items-center justify-center gap-8 lg:gap-12">
               <div className="flex items-center gap-8 lg:gap-12">
-                <a
-                  href="#about"
+                <Link
+                  href="/#about"
                   className={`${scrolled ? "text-primary" : "text-gold"} text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:text-white`}
                 >
                   About
-                </a>
-                <a
-                  href="#experience"
+                </Link>
+                <Link
+                  href="/#experience"
                   className={`${scrolled ? "text-primary" : "text-gold"} text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:text-white`}
                 >
                   Experience
-                </a>
+                </Link>
               </div>
 
               {/* Logo */}
@@ -95,29 +95,29 @@ export default function Navigation() {
               </Link>
 
               <div className="flex items-center gap-8 lg:gap-12">
-                <a
+                <Link
                   href="/menu"
                   className={`${scrolled ? "text-primary" : "text-gold"} text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:text-white`}
                 >
                   Menu
-                </a>
-                <a
-                  href="#contact"
+                </Link>
+                <Link
+                  href="/#contact"
                   className={`${scrolled ? "text-primary" : "text-gold"} text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:text-white`}
                 >
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
 
             {/* Right Section: CTA */}
             <div className="flex w-1/4 justify-end">
-              <a
-                href="#book"
+              <Link
+                href="/#book"
                 className={`${scrolled ? "text-primary border-primary" : "border-white text-white"} hover:text-primary border px-6 py-2 text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:bg-white`}
               >
                 Book Now
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -184,20 +184,20 @@ export default function Navigation() {
         <div className="flex flex-1 flex-col justify-center px-8">
           <nav className="flex flex-col gap-6">
             {[
-              { label: "About", href: "#about" },
-              { label: "Experience", href: "#experience" },
+              { label: "About", href: "/#about" },
+              { label: "Experience", href: "/#experience" },
               { label: "Menu", href: "/menu" },
-              { label: "Contact", href: "#contact" },
-              { label: "Book Now", href: "#book" },
+              { label: "Contact", href: "/#contact" },
+              { label: "Book Now", href: "/#book" },
             ].map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
                 className="font-display text-4xl text-[#e0e0e0] transition-colors hover:text-white"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
