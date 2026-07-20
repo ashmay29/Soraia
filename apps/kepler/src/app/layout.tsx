@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import FlowerBorder from "@/components/Hero/animations/FlowerBorder";
+import DecorativeBorder from "@/components/DecorativeBorder";
 
 export const metadata: Metadata = {
   title: "Soraia - Modern Indian-European Restaurant",
@@ -24,7 +24,7 @@ export default function RootLayout({
         />
       </head>
       <body className="relative antialiased">
-        <FlowerBorder />
+        <DecorativeBorder />
 
         {children}
       </body>
