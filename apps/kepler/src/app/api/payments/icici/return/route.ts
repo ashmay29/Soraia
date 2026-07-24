@@ -19,9 +19,9 @@ export async function POST(req: Request) {
   // secureHash calculation.
   const params = Object.fromEntries(new URLSearchParams(body)) as Record<string, unknown>;
 
-  const redirect = (path: string) =>
+  const redirect = async (path: string) =>
     // 303 so the browser issues a GET for the result page rather than re-POSTing.
-    NextResponse.redirect(`${appBaseUrl()}${path}`, 303);
+    NextResponse.redirect(`${await appBaseUrl()}${path}`, 303);
 
   if (!verifyInboundHash(params, merchantKey())) {
     console.error("[icici/return] signature verification FAILED", { body });
@@ -40,5 +40,5 @@ export async function POST(req: Request) {
 
 /** ICICI should POST here; a GET means someone opened the URL directly. */
 export async function GET() {
-  return NextResponse.redirect(`${appBaseUrl()}/pay/invalid`, 303);
+  return NextResponse.redirect(`${await appBaseUrl()}/pay/invalid`, 303);
 }

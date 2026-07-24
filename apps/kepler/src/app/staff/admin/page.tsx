@@ -38,18 +38,20 @@ export default async function AdminPage() {
   }));
 
   const now = new Date();
-  const allRows: LinkRow[] = all.map((link) => ({
-    id: link._id!.toString(),
-    url: payUrl(link.token),
-    amount: formatInr(link.amountPaise),
-    description: link.description,
-    customerName: link.customer?.name,
-    status: link.status,
-    createdAt: `${dateFmt.format(link.createdAt)} · ${nameById.get(link.createdBy.toString()) ?? "Unknown"}`,
-    expiresAt: link.expiresAt ? dateFmt.format(link.expiresAt) : undefined,
-    isExpired: !!link.expiresAt && link.expiresAt.getTime() <= now.getTime(),
-    rejectedReason: link.rejectedReason,
-  }));
+  const allRows: LinkRow[] = await Promise.all(
+    all.map(async (link) => ({
+      id: link._id!.toString(),
+      url: await payUrl(link.token),
+      amount: formatInr(link.amountPaise),
+      description: link.description,
+      customerName: link.customer?.name,
+      status: link.status,
+      createdAt: `${dateFmt.format(link.createdAt)} · ${nameById.get(link.createdBy.toString()) ?? "Unknown"}`,
+      expiresAt: link.expiresAt ? dateFmt.format(link.expiresAt) : undefined,
+      isExpired: !!link.expiresAt && link.expiresAt.getTime() <= now.getTime(),
+      rejectedReason: link.rejectedReason,
+    }))
+  );
 
   const paidCount = all.filter((l) => l.status === "paid").length;
   const paidTotal = all

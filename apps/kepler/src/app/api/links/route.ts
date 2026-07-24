@@ -36,7 +36,7 @@ export async function POST(req: Request) {
   if (link.status === "pending_approval") {
     const to = adminAlertAddress();
     if (to) {
-      const mail = approvalAlertEmail({
+      const mail = await approvalAlertEmail({
         amountPaise: link.amountPaise,
         description: link.description,
         createdByName: user.name,
@@ -53,7 +53,7 @@ export async function POST(req: Request) {
     {
       id: link._id!.toString(),
       status: link.status,
-      url: payUrl(link.token),
+      url: await payUrl(link.token),
       needsApproval: link.status === "pending_approval",
     },
     { status: 201 }

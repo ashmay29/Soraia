@@ -19,9 +19,9 @@ const escape = (s: string) =>
  * channel — anyone reading the admin's inbox would otherwise get a payable URL.
  * The admin approves from the dashboard, behind a login.
  */
-export function approvalAlertEmail(alert: ApprovalAlert) {
+export async function approvalAlertEmail(alert: ApprovalAlert) {
   const amount = formatInr(alert.amountPaise);
-  const url = `${appBaseUrl()}/staff/admin`;
+  const url = `${await appBaseUrl()}/staff/admin`;
   const customerLine = alert.customerName ? `Customer: ${alert.customerName}\n` : "";
 
   const text = [

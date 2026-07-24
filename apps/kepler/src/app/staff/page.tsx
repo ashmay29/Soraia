@@ -21,18 +21,20 @@ export default async function StaffHomePage() {
   const pendingCount = user.role === "admin" ? (await listPendingApproval()).length : 0;
   const now = new Date();
 
-  const rows: LinkRow[] = links.map((link) => ({
-    id: link._id!.toString(),
-    url: payUrl(link.token),
-    amount: formatInr(link.amountPaise),
-    description: link.description,
-    customerName: link.customer?.name,
-    status: link.status,
-    createdAt: dateFmt.format(link.createdAt),
-    expiresAt: link.expiresAt ? dateFmt.format(link.expiresAt) : undefined,
-    isExpired: !!link.expiresAt && link.expiresAt.getTime() <= now.getTime(),
-    rejectedReason: link.rejectedReason,
-  }));
+  const rows: LinkRow[] = await Promise.all(
+    links.map(async (link) => ({
+      id: link._id!.toString(),
+      url: await payUrl(link.token),
+      amount: formatInr(link.amountPaise),
+      description: link.description,
+      customerName: link.customer?.name,
+      status: link.status,
+      createdAt: dateFmt.format(link.createdAt),
+      expiresAt: link.expiresAt ? dateFmt.format(link.expiresAt) : undefined,
+      isExpired: !!link.expiresAt && link.expiresAt.getTime() <= now.getTime(),
+      rejectedReason: link.rejectedReason,
+    }))
+  );
 
   const thresholdRupees = String(approvalThresholdPaise() / 100);
 
