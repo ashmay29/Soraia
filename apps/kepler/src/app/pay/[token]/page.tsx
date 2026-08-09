@@ -1,5 +1,6 @@
 import PayShell from "@/components/pay/PayShell";
 import PayButton from "@/components/pay/PayButton";
+import PolicyGate from "@/components/pay/PolicyGate";
 import { formatInr } from "@/lib/config";
 import { paymentLinks } from "@/lib/db";
 import type { PaymentLink } from "@/lib/types";
@@ -40,6 +41,8 @@ export default async function PayPage({ params }: { params: Promise<{ token: str
 
   return (
     <PayShell>
+      <PolicyGate token={token} />
+
       <div className="text-center">
         <p className="text-primary/75 text-[10px] tracking-[0.25em] uppercase">Amount due</p>
         <p className="font-display text-primary mt-3 text-4xl">{formatInr(link.amountPaise)}</p>
