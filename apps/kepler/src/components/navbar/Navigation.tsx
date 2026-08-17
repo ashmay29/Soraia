@@ -107,6 +107,12 @@ export default function Navigation() {
                 >
                   Contact
                 </Link>
+                <Link
+                  href="/legal"
+                  className={`${scrolled ? "text-primary" : "text-gold"} text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:text-white`}
+                >
+                  Info
+                </Link>
               </div>
             </div>
 
@@ -188,6 +194,7 @@ export default function Navigation() {
               { label: "Experience", href: "/#experience" },
               { label: "Menu", href: "/menu" },
               { label: "Contact", href: "/#contact" },
+              { label: "Info", href: "/legal" },
               { label: "Book Now", href: "/#book" },
             ].map((item) => (
               <Link

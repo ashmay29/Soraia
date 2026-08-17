@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -31,28 +32,28 @@ export default function Footer() {
             <h4 className="text-gold mb-4 text-xs tracking-[0.2em] uppercase">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a
+                <Link
                   href="/#about"
                   className="text-background hover:text-gold transition-colors duration-300"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#experience"
                   className="text-background hover:text-gold transition-colors duration-300"
                 >
                   Experience
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#contact"
                   className="text-background hover:text-gold transition-colors duration-300"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -71,26 +72,44 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-gold flex flex-col items-center justify-between gap-4 border-t pt-8 md:flex-row">
           <p className="text-background/70 text-sm">
-            © {new Date().getFullYear()} Soraia Innercircle Hospitality LLP. All rights reserved.
+            © {new Date().getFullYear()} Innercircle Hospitality LLP. All rights reserved.
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link
+              href="/legal?tab=about"
+              className="text-gray hover:text-background text-sm transition-colors duration-300"
+            >
+              About Us
+            </Link>
+            <Link
+              href="/legal?tab=contact"
+              className="text-gray hover:text-background text-sm transition-colors duration-300"
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="/legal?tab=terms"
+              className="text-gray hover:text-background text-sm transition-colors duration-300"
+            >
+              Terms & Conditions
+            </Link>
+            <Link
+              href="/legal?tab=return-policy"
+              className="text-gray hover:text-background text-sm transition-colors duration-300"
+            >
+              Return Policy
+            </Link>
+            <Link
+              href="/legal?tab=privacy"
+              className="text-gray hover:text-background text-sm transition-colors duration-300"
+            >
+              Privacy Policy
+            </Link>
             <a
               href="https://eigensu.in"
               className="text-gray hover:text-background text-sm transition-colors duration-300"
             >
               Designed & Developed by @Eigensu
-            </a>
-            <a
-              href="#"
-              className="text-gray hover:text-background text-sm transition-colors duration-300"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-gray hover:text-background text-sm transition-colors duration-300"
-            >
-              Terms of Service
             </a>
             <a
               href="https://eigensu.in"
