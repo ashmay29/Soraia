@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import DecorativeBorder from "@/components/DecorativeBorder";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Soraia - Modern Indian-European Restaurant",
@@ -27,6 +28,7 @@ export default function RootLayout({
         <DecorativeBorder />
 
         {children}
+        <Analytics />
       </body>
     </html>
   );
