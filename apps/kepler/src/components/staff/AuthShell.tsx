@@ -45,6 +45,11 @@ export default function AuthShell({
             </Link>
           ))}
         </div>
+        <p className="text-primary/50 mt-6 text-center text-[11px] leading-relaxed font-light">
+          Royal Western India Turf Club, Mahalaxmi Race Course
+          <br />
+          Mahalaxmi, Mumbai, Maharashtra 400011
+        </p>
       </div>
     </main>
   );

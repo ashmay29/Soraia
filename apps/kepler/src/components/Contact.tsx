@@ -50,8 +50,11 @@ export default function Contact() {
               <div>
                 <h3 className="text-primary mb-3 text-xs tracking-[0.2em] uppercase">Location</h3>
                 <p className="text-foreground text-lg leading-relaxed">
-                  Mumbai, India
-                  <br />A destination for refined dining
+                  Royal Western India Turf Club
+                  <br />
+                  Mahalaxmi Race Course, Mahalaxmi
+                  <br />
+                  Mumbai, Maharashtra 400011
                 </p>
               </div>
 

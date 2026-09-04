@@ -37,7 +37,7 @@ export const LEGAL_TABS: LegalTab[] = [
     sections: [
       {
         paragraphs: [
-          "Mumbai, India — a destination for refined dining.",
+          "Royal Western India Turf Club, Mahalaxmi Race Course, Mahalaxmi, Mumbai, Maharashtra 400011.",
           "For reservations and party enquiries, call +91 90049 58000.",
           "Follow us on Instagram @soraiabombay for updates and events.",
         ],
