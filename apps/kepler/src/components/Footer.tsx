@@ -62,9 +62,11 @@ export default function Footer() {
           <div>
             <h4 className="text-gold mb-4 text-xs tracking-[0.2em] uppercase">Contact</h4>
             <p className="text-background text-sm leading-relaxed">
-              Mumbai, India
+              Royal Western India Turf Club
               <br />
-              For reservations and inquiries
+              Mahalaxmi Race Course, Mahalaxmi
+              <br />
+              Mumbai, Maharashtra 400011
             </p>
           </div>
         </div>
